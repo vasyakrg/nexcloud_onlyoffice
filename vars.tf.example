@@ -1,0 +1,27 @@
+variable "token" {
+  default = ""
+}
+
+variable "ssh_public_key" {
+  default = ""
+}
+
+variable "scalet_name" {
+  default = "serv"
+}
+
+variable "scalet_hostname" {
+  default = "serv"
+}
+
+variable "scalet_image" {
+  default = "debian_9_64_001_master"
+}
+
+variable "location" {
+  default = "spb0"
+}
+
+variable "plan" {
+  default =
+}
