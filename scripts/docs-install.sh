@@ -45,4 +45,4 @@ sudo reboot
 # >> sudo crontab -e
 #This is the line I added:
 #
-# >> 12 3 * * *   letsencrypt renew >> /var/log/letsencrypt/renew.log
+# >> 12 3 * * *   sudo letsencrypt renew >> /var/log/letsencrypt/renew.log
