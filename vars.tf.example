@@ -1,27 +1,68 @@
-variable "token" {
+variable "project" {
   default = ""
 }
 
-variable "ssh_public_key" {
+variable "region" {
+  default = "us-central1"
+}
+
+variable "zone_instance" {
+  default = "us-central1-a"
+}
+
+variable "disk_image" {
+  default = "ubuntu-1804-lts"
+}
+
+variable "nc_machine_type" {
+  default = "n1-standard-1" # 1 CPU + 3,75 RAM - ~$25 monthly
+}
+
+variable "docs_machine_type" {
+  default = "n1-standard-2" # 2 CPU + 7,5 RAM - ~$49 monthly - https://helpcenter.onlyoffice.com/ru/server/linux/document/system-requirements.aspx
+}
+
+variable "username" {
+  default = "ubuntu"
+}
+
+variable "network_name" {
+  default = "default"
+}
+
+variable "net_tag_nc" {
+  default = "firewall-nc"
+}
+
+variable "net_tag_docs" {
+  default = "firewall-docs"
+}
+
+
+variable "length_pass" {
+  default = "12"
+}
+
+#==================#
+# var for AWS
+#==================#
+variable "region_aws" {
+  default = "us-east-2"
+}
+
+variable "access_key" {
   default = ""
 }
 
-variable "scalet_name" {
-  default = "serv"
+variable "secret_key" {
+  default = ""
 }
 
-variable "scalet_hostname" {
-  default = "serv"
+variable "dns_zone_name" {
+  default = ""
 }
 
-variable "scalet_image" {
-  default = "debian_9_64_001_master"
-}
-
-variable "location" {
-  default = "spb0"
-}
-
-variable "plan" {
-  default =
+variable "name_virtualhost" {
+  type    = "list"
+  default = ["nc", "docs"]
 }
